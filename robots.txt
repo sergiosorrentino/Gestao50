@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gestao-50.vp-advisor.com/sitemap.xml
