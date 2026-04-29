@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergio Sorrentino · VP Advisor</title>
+  <meta name="description" content="Sergio Sorrentino — Executivo sênior, consultor e autor de Gestão 5.0. Estratégia, execução e resultados para empresas em crescimento.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://vp-advisor.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0e1f35;
+      --navy2:  #1a3555;
+      --teal:   #007a5e;
+      --teal-l: #00a07a;
+      --light:  #6ee7c8;
+      --ink:    rgba(255,255,255,.85);
+      --ink-2:  rgba(255,255,255,.5);
+      --ink-3:  rgba(255,255,255,.3);
+      --rule:   rgba(255,255,255,.1);
+      --serif:  'Lora', Georgia, serif;
+      --sans:   'DM Sans', system-ui, sans-serif;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--navy);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 15% 20%, rgba(0,122,94,.22) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 80%, rgba(0,122,94,.12) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy2), var(--teal));
+      border: 2px solid rgba(110,231,200,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--light);
+      margin-bottom: 1.25rem;
+      box-shadow: 0 0 32px rgba(0,122,94,.3);
+    }
+
+    .name {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: .2rem;
+      text-align: center;
+    }
+
+    .role {
+      font-size: .82rem;
+      color: var(--light);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: .5rem;
+      text-align: center;
+    }
+
+    .bio {
+      font-size: .88rem;
+      color: var(--ink-2);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      max-width: 340px;
+    }
+
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: .9rem 1.1rem;
+      text-decoration: none;
+      color: var(--ink);
+      transition: background .2s, border-color .2s, transform .15s;
+    }
+
+    .link:hover {
+      background: rgba(0,122,94,.18);
+      border-color: rgba(0,160,122,.4);
+      transform: translateY(-1px);
+    }
+
+    .link-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .link-icon.green  { background: rgba(0,122,94,.25); }
+    .link-icon.navy   { background: rgba(14,31,53,.6); border: 1px solid var(--rule); }
+    .link-icon.teal   { background: rgba(0,160,122,.2); }
+    .link-icon.amber  { background: rgba(196,125,14,.2); }
+    .link-icon.red    { background: rgba(180,30,30,.2); }
+
+    .link-text { flex: 1; }
+    .link-title { font-size: .9rem; font-weight: 500; color: #fff; display: block; line-height: 1.2; }
+    .link-sub   { font-size: .76rem; color: var(--ink-3); display: block; margin-top: .1rem; }
+    .link-arrow { font-size: .8rem; color: var(--ink-3); flex-shrink: 0; }
+
+    .divider {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: .4rem 0;
+    }
+    .divider span {
+      font-size: .68rem;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .foot {
+      margin-top: 2rem;
+      font-size: .72rem;
+      color: var(--ink-3);
+      text-align: center;
+      line-height: 1.7;
+    }
+    .foot a { color: var(--ink-3); text-decoration: none; }
+    .foot a:hover { color: var(--light); }
+  </style>
+</head>
+<body>
+<div class="card">
+
+  <div class="avatar">SS</div>
+  <p class="name">Sergio Sorrentino</p>
+  <p class="role">VP Advisor · Gestão 5.0</p>
+  <p class="bio">Executivo sênior · Consultor estratégico · Autor<br>Estratégia, execução e resultados para empresas em crescimento.</p>
+
+  <div class="links">
+
+    <a class="link" href="https://vp-advisor.com" target="_blank" rel="noopener noreferrer">
+      <div class="link-icon green">🏠</div>
+      <div class="link-text">
+        <span class="link-title">Site Oficial — VP Advisor</span>
+        <span class="link-sub">vp-advisor.com</span>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link" href="https://gestao-50.vp-advisor.com" target="_blank" rel="noopener noreferrer">
+      <div class="link-icon teal">📖</div>
+      <div class="link-text">
+        <span class="link-title">Gestão 5.0 — Referência Conceitual</span>
+        <span class="link-sub">gestao-50.vp-advisor.com</span>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link" href="https://gestao-50.vp-advisor.com/gestao-5-0-modelo-de-gestao-sergio-sorrentino.pdf" target="_blank" rel="noopener noreferrer">
+      <div class="link-icon amber">⬇️</div>
+      <div class="link-text">
+        <span class="link-title">Baixar o Livro Gestão 5.0</span>
+        <span class="link-sub">Download gratuito · PDF</span>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link" href="https://blog.vp-advisor.com" target="_blank" rel="noopener noreferrer">
+      <div class="link-icon navy">✍️</div>
+      <div class="link-text">
+        <span class="link-title">Blog — Artigos e Reflexões</span>
+        <span class="link-sub">blog.vp-advisor.com</span>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <div class="divider"><span>Redes e contato</span></div>
+
+    <a class="link" href="https://www.linkedin.com/in/sergiosorrentino" target="_blank" rel="noopener noreferrer">
+      <div class="link-icon navy">💼</div>
+      <div class="link-text">
+        <span class="link-title">LinkedIn</span>
+        <span class="link-sub">linkedin.com/in/sergiosorrentino</span>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link" href="https://www.youtube.com/@estrategiaedinheiro" target="_blank" rel="noopener noreferrer">
+      <div class="link-icon red">▶️</div>
+      <div class="link-text">
+        <span class="link-title">YouTube — Estratégia e Dinheiro</span>
+        <span class="link-sub">@estrategiaedinheiro</span>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link" href="mailto:sergiosm@vp-advisor.com">
+      <div class="link-icon green">✉️</div>
+      <div class="link-text">
+        <span class="link-title">Fale com Sergio Sorrentino</span>
+        <span class="link-sub">sergiosm@vp-advisor.com</span>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+  </div>
+
+  <p class="foot">
+    © 2026 Sergio Sorrentino · VP Advisor · São Paulo, Brasil<br>
+    <a href="https://vp-advisor.com">vp-advisor.com</a>
+  </p>
+
+</div>
+</body>
+</html>
