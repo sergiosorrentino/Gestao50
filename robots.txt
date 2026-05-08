@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Allow: /Gestao50/
 
-Sitemap: https://gestao-50.vp-advisor.com/sitemap.xml
+Sitemap: https://sergiosorrentino.github.io/Gestao50/sitemap.xml
