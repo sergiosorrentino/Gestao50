@@ -1,4 +1,104 @@
-User-agent: *
-Allow: /Gestao50/
+# robots.txt — sergiosorrentino.github.io/Gestao50/
+# Atualizado: 2026-06-18
+# Referência: https://vp-advisor.com — Sergio Sorrentino
 
+# ── Regra geral ──────────────────────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# ── Crawlers de IA — explicitamente permitidos ────────────────────────────────
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot-AI
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft
+User-agent: Bingbot
+Allow: /
+
+User-agent: MicrosoftPreview
+Allow: /
+
+# Meta
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# xAI / Grok
+User-agent: Grok
+Allow: /
+
+# Mistral
+User-agent: MistralBot
+Allow: /
+
+# Common Crawl (base de treino de LLMs)
+User-agent: CCBot
+Allow: /
+
+# DiffBot
+User-agent: DiffBot
+Allow: /
+
+# ── Ferramentas de SEO ────────────────────────────────────────────────────────
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+# ── Sitemap ───────────────────────────────────────────────────────────────────
 Sitemap: https://sergiosorrentino.github.io/Gestao50/sitemap.xml
